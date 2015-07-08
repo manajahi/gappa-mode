@@ -8,6 +8,8 @@
   '("in")
   "gappa events.")
 
+(defvar gappa-warning-regexp (concat "Warning: .*") "*Regular expression to find Warnings")
+
 ;; generate the regex string for each class of keywords
 (defvar gappa-keywords-regexp (regexp-opt gappa-keywords 'words))
 (defvar gappa-type-regexp (concat "fixed<[-]?[0-9]+,[a-z]+>") "*Regular expression to find fixed<...>")
@@ -22,20 +24,5 @@
 ;; clear memory
 ;; (setq gappa-keywords nil)
 ;; (setq gappa-events nil)
-
-
-;; create the list for font-lock.
-;; each class of keyword is given a particular face
-(setq gappa-font-lock-keywords
-  `(
-    (,gappa-comments-regexp . font-lock-comment-face)
-    (,gappa-type-regexp . font-lock-type-face)
-    (,gappa-constant-regexp . font-lock-constant-face)
-    (,gappa-event-regexp . font-lock-builtin-face)
-    (,gappa-keywords-regexp . font-lock-keyword-face)
-    (,gappa-functions-regexp . font-lock-function-name-face)   
-    (,gappa-variable-regexp . font-lock-variable-name-face)
-    (,gappa-preprocessor-regexp . font-lock-preprocessor-face)
-))
 
 (provide 'gappa-fonts)

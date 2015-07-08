@@ -1,4 +1,10 @@
-;(require 'gappa-fonts)
+(require 'gappa-fonts)
+
+(setq gappa-out-font-lock-keywords
+  `(
+    ;; (,gappa-warning-regexp . font-lock-comment-face)
+    (,gappa-warning-regexp . font-lock-constant-face)
+))
 
 ;; define the mode
 (define-derived-mode gappa-out-mode fundamental-mode
@@ -6,7 +12,7 @@
   "Major mode for editing gappa scripts…"
 
   ;; code for syntax highlighting
-  ;; (setq font-lock-defaults '((gappa-font-lock-keywords)))
+  (setq font-lock-defaults '((gappa-out-font-lock-keywords)))
 
   ;; ;; clear memory
   ;; (setq gappa-keywords-regexp nil)

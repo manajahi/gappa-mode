@@ -6,9 +6,9 @@
 ;; Maintainer: Amine Najahi amine.najahi@univ-perp.fr
 ;; Created: Mon Aug 20 12:54:25 2012 (+0200)
 ;; Version: 0.1.0
-;; Last-Updated: Wed Jul  8 19:14:50 2015 (+0200)
+;; Last-Updated: Wed Jul  8 19:59:15 2015 (+0200)
 ;;           By: Mohamed Amine Najahi
-;;     Update #: 95
+;;     Update #: 97
 ;; URL: http://perso.univ-perp.fr/mohamedamine.najahi
 ;; Keywords: Gappa emacs mode
 ;; Compatibility: 
@@ -36,6 +36,19 @@
     map)
   "Keymap used in `gappa-mode' buffers.")
 
+;; create the list for font-lock.
+;; each class of keyword is given a particular face
+(setq gappa-font-lock-keywords
+  `(
+    (,gappa-comments-regexp . font-lock-comment-face)
+    (,gappa-type-regexp . font-lock-type-face)
+    (,gappa-constant-regexp . font-lock-constant-face)
+    (,gappa-event-regexp . font-lock-builtin-face)
+    (,gappa-keywords-regexp . font-lock-keyword-face)
+    (,gappa-functions-regexp . font-lock-function-name-face)   
+    (,gappa-variable-regexp . font-lock-variable-name-face)
+    (,gappa-preprocessor-regexp . font-lock-preprocessor-face)
+))
 
 ;; define the mode
 (define-derived-mode gappa-mode fundamental-mode
