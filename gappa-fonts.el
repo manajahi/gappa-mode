@@ -8,7 +8,11 @@
   '("in")
   "gappa events.")
 
-(defvar gappa-warning-regexp (concat "Warning: .*") "*Regular expression to find Warnings")
+(defvar gappa-warning-regexp "Warning: .*"
+  "*Regular expression to find Warnings")
+
+(defvar gappa-results-regexp "Results")
+(defvar gappa-key-regexp "in")
 
 ;; generate the regex string for each class of keywords
 (defvar gappa-keywords-regexp (regexp-opt gappa-keywords 'words))

@@ -3,7 +3,9 @@
 (setq gappa-out-font-lock-keywords
   `(
     ;; (,gappa-warning-regexp . font-lock-comment-face)
-    (,gappa-warning-regexp . font-lock-constant-face)
+    (,gappa-warning-regexp . font-lock-keyword-face)
+    (,gappa-results-regexp . font-lock-keyword-face)
+    (,gappa-key-regexp . font-lock-keyword-face)
 ))
 
 ;; define the mode

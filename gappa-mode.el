@@ -6,9 +6,9 @@
 ;; Maintainer: Amine Najahi amine.najahi@univ-perp.fr
 ;; Created: Mon Aug 20 12:54:25 2012 (+0200)
 ;; Version: 0.1.0
-;; Last-Updated: Wed Jul  8 19:59:15 2015 (+0200)
+;; Last-Updated: Thu Jul  9 18:07:26 2015 (+0200)
 ;;           By: Mohamed Amine Najahi
-;;     Update #: 97
+;;     Update #: 98
 ;; URL: http://perso.univ-perp.fr/mohamedamine.najahi
 ;; Keywords: Gappa emacs mode
 ;; Compatibility: 
